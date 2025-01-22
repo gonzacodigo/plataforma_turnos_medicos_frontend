@@ -10,8 +10,6 @@ import PatientsList from "./pages/Patients/List";
 import PatientsForm from "./pages/Patients/Form";
 import DoctorsList from "./pages/Doctors/List";
 import DoctorsForm from "./pages/Doctors/Form";
-import DynamicHTML from "./components/DynamicHTML"; // Importa el componente
-import DynamicHTMLDoctor from "./components/DynamicHTMLDoctor";  // Importa el nuevo componente
 
 export default function App() {
   return (
@@ -25,8 +23,6 @@ export default function App() {
           <li><Link to="/users">Usuarios</Link></li>
           <li><Link to="/patients">Pacientes</Link></li>
           <li><Link to="/doctors">Doctores</Link></li>
-          <li><Link to="/calendar.html">Calendario</Link></li> {/* Enlace al calendario */}
-          <li><Link to="/doctor.html">MARCAR DIAS NO LABORABLES</Link></li> {/* Enlace al calendario */}
         </ul>
       </nav>
 
@@ -46,8 +42,6 @@ export default function App() {
         <Route path="/doctors" element={<DoctorsList />} />
         <Route path="/doctors/new" element={<DoctorsForm />} />
         <Route path="/doctors/:id" element={<DoctorsForm />} />
-        <Route path="/calendar.html" element={<DynamicHTML />} /> {/* Ruta para el calendario */}
-        <Route path="/doctor.html" element={<DynamicHTMLDoctor />} /> {/* Ruta para el calendario */}
       </Routes>
     </Router>
   );

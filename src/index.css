@@ -1,227 +1,68 @@
-/* Reset de estilos básicos */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif; /* Fuente moderna y limpia */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Cuerpo y fondo */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
 body {
-  background-color: #f7f9fc; /* Fondo suave y claro */
-  color: #333;
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-/* Estilo global de los contenedores */
-.container {
-  width: 85%;
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: white;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  transition: all 0.3s ease-in-out;
-}
-
-/* Estilo para los encabezados */
-h1, h2, h3 {
-  font-family: 'Poppins', sans-serif; /* Fuente elegante */
-  font-weight: 600;
-  color: #2c3e50;
-  margin-bottom: 1rem;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
 h1 {
-  font-size: 2rem;
-  color: #1abc9c; /* Color principal */
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-h2, h3 {
-  font-size: 1rem;
-  color: #34495e;
-}
-
-/* Barra de navegación */
-nav {
-  background-color: #1abc9c;
-  padding: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-}
-
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-  color: #f1c40f; /* Amarillo dorado en hover */
-}
-
-/* Estilo para los enlaces internos */
-a {
-  text-decoration: none;
-  color: inherit;
-  transition: color 0.3s ease-in-out;
-}
-
-a:hover {
-  color: #1abc9c;
-}
-
-/* Estilos para botones */
 button {
-  padding: 12px 18px;
-  border: none;
-  font-size: 1rem;
-  background-color: #1abc9c;
-  color: white;
   border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  transition: border-color 0.25s;
 }
-
 button:hover {
-  background-color: #16a085;
-  transform: translateY(-3px);
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-button:active {
-  transform: translateY(2px);
-}
-
-button:disabled {
-  background-color: #bdc3c7;
-  cursor: not-allowed;
-}
-
-/* Formularios */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-form input, form select, form textarea {
-  padding: 12px 16px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  transition: border-color 0.3s ease-in-out;
-}
-
-form input:focus, form select:focus, form textarea:focus {
-  border-color: #1abc9c;
-  outline: none;
-}
-
-/* Estilo para tablas */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
-}
-
-table th, table td {
-  padding: 12px 18px;
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-table th {
-  background-color: #1abc9c;
-  color: white;
-}
-
-table td {
-  color: #555;
-}
-
-table tr:hover {
-  background-color: #f1f1f1;
-}
-
-/* Diseño de la página de calendario */
-#calendar-container {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-#calendar {
-  margin-top: 30px;
-  background-color: #fff;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  padding: 20px;
-}
-
-/* Popup (si necesitas un popup para interacciones) */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 500px;
-  width: 100%;
-}
-
-.popup input {
-  padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 100%;
-}
-
-.popup button {
-  padding: 12px 18px;
-  border: none;
-  background-color: #e74c3c;
-  color: white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s ease-in-out;
-}
-
-.popup button:hover {
-  background-color: #c0392b;
-  transform: translateY(-3px);
-}
-
-.popup button:active {
-  transform: translateY(2px);
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
 }
