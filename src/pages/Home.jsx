@@ -2,7 +2,7 @@ export default function Home() {
     return (
       <div id="inicio">
 
-<div id="carouselExample" className="carousel slide w-75 mx-auto" data-bs-ride="carousel">
+<div id="carouselExample" className="carousel slide mx-auto" data-bs-ride="carousel">
         <div className="carousel-inner">
           {[
             { src: "../img/frente.png", alt: "Fachada de clínica" },
