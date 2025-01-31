@@ -20,7 +20,7 @@ const UsersList = () => {
   };
 
   return (
-    <div>
+    <div id="users">
       <h1>Lista de Usuarios</h1>
       <Link to="/users/new">Crear nuevo usuario</Link>
       <ul>

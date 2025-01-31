@@ -23,9 +23,8 @@ const DoctorsList = () => {
         );
     }
   };
-
   return (
-    <div>
+    <div id="doctors">
       <h1>Lista de Doctores</h1>
       <Link to="/doctors/new">Registrar nuevo doctor</Link>
       <table>

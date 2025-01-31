@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#contenedor{
+    margin: 10px auto;
+    width: 1200px;
+}
+header{
+    background-color: #9b4545;
+    color: white;
+    padding: 10px;
+    height: 100px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+#menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#menu ul li{
+    float: left;
+    font-size: 15px;
+}
+
+#menu ul li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 40px;
+    margin-left: 30px;
+}
+#menu ul li a:hover{
+    background-color: rgb(248, 160, 52);
+    color:black;
+}
+div#inicio,#about,#contact,#types,#users,#patients,#doctors,#login,#pacientes,#doctores,#administradores,#recepcionistas{
+    background-color: beige;
+    margin: 10px auto;
+    width: 1200px;
+}
+div#login{
+    text-align: center;
+}

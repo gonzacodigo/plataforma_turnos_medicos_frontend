@@ -13,7 +13,7 @@ const PatientsList = () => {
   }, []);
 
   return (
-    <div>
+    <div id="types">
       <h1>Lista de Pacientes</h1>
       <Link to="/patients/new">Registrar nuevo paciente</Link>
       <table>
