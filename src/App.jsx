@@ -10,37 +10,40 @@ import PatientsList from "./pages/Patients/List";
 import PatientsForm from "./pages/Patients/Form";
 import DoctorsList from "./pages/Doctors/List";
 import DoctorsForm from "./pages/Doctors/Form";
-import Login from "./pages/Login";
+import Login from "./pages/login";
 import Pacientes from "./pages/pacientes";
 import Doctores from "./pages/doctores";
 import Administradores from "./pages/administradores";
 import Recepcionistas from "./pages/recepcionistas";
-import CalendarContainer from './components/CalendarContainer';
+import Registro from "./pages/Registro";
+
+
+
+
+
 
 export default function App() {
-  // Asume que obtienes estos valores dinámicamente del sistema de autenticación
-  const userId = 1; // Simulación del ID del usuario autenticado
-  const userType = 'doctor'; // Simulación del tipo de usuario (puede ser doctor, paciente, etc.)
-
   return (
     <Router>
       <div id="contenedor">
-        <header>
-          <h1>Clinica Médica</h1>
-        </header>
-        <nav id="menu">
-          <ul>
-            <li><Link to="/">Inicio</Link></li>
-            <li><Link to="/about">Acerca de</Link></li>
-            <li><Link to="/contact">Contacto</Link></li>
-            <li><Link to="/users">Usuarios</Link></li>
-            <li><Link to="/patients">Pacientes</Link></li>
-            <li><Link to="/doctors">Doctores</Link></li>
-            <li><Link to="/login">Ingresar</Link></li>
-          </ul>
-        </nav>
-      </div>
+      <header>
+        <h1>Clinica Medica Salud & Bienestar</h1>
+      </header>
+      <nav id="menu">
+        <ul>
+          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/about">Acerca de</Link></li>
+          <li><Link to="/contact">Contacto</Link></li>
+          {/* <li><Link to="/types">Tipos</Link></li> */}
+          {/* <li><Link to="/users">Usuarios</Link></li> */}
+          {/* <li><Link to="/patients">Pacientes</Link></li> */}
+          {/* <li><Link to="/doctors">Doctores</Link></li> */}
+          
+          <li><Link to="/login">Ingresar</Link></li>
 
+        </ul>
+      </nav>
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -62,12 +65,11 @@ export default function App() {
         <Route path="/doctores" element={<Doctores />} />
         <Route path="/administradores" element={<Administradores />} />
         <Route path="/recepcionistas" element={<Recepcionistas />} />
-        
-        {/* Ruta para el calendario */}
-        <Route 
-          path="/calendar" 
-          element={<CalendarContainer userId={userId} userType={userType} />} 
-        />
+        <Route path="/registro" element={<Registro />} />
+
+
+
+
       </Routes>
     </Router>
   );
