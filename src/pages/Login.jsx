@@ -24,6 +24,13 @@ const Login = () => {
       if (response.ok) {
         // Guardar datos del usuario en localStorage o contexto
         localStorage.setItem("user", JSON.stringify(data.user));
+
+
+        //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        
+
+        //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
         
         // Redirigir a la página de perfil o dashboard
         if(data.user[8]==1)
@@ -52,8 +59,14 @@ const Login = () => {
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" required /> <br />
         <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" required /> <br />
         <button type="submit">Iniciar sesión</button>
+        <br />
+        
       </form>
       {error && <p style={{ color: "red" }}>{error}</p>}
+      {/* Botón de registro */}
+      <button onClick={() => navigate("/registro")} style={{ marginTop: "10px", backgroundColor: "blue", color: "white" }}>
+        Registrarse
+      </button>
     </div>
   );
 };
