@@ -55,10 +55,10 @@ function AddDoctor() {
                 usr_id : data.usr_id,
             };
     
-            //console.log("Enviando pacienteData:", pacienteData);
+            console.log("Enviando pacienteData:", pacienteData);
     
             //  SEGUNDO FETCH - Crear paciente
-            const response2 = await fetch("http://127.0.0.1:5000/doctor", {
+            const response2 = await fetch("http://127.0.0.1:5000/doctors", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -76,7 +76,7 @@ function AddDoctor() {
             navigate(`/Home`);
     
         } catch (error) {
-            console.error("Error al crear usuario/paciente:", error);
+            console.error("Error al crear usuario/doctor:", error);
         }
     };
 

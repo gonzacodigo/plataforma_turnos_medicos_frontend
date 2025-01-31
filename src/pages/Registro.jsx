@@ -13,7 +13,7 @@ function Registro() {
     const [usr_phone, setPhone] = useState("");
     const [os_id, setOsId] = useState(""); // Obra social seleccionada
     const [medicares, setMedicares] = useState([]); // Lista de obras sociales
-    const tip_id = 4; // Tipo de usuario paciente
+    const tip_id = 2; // Tipo de usuario paciente
 
     useEffect(() => {
         // Cargar obras sociales
@@ -85,7 +85,7 @@ function Registro() {
             console.log("Paciente creado con éxito");
     
             //  Redirección tras éxito
-            navigate(`/Home`);
+            navigate(`/`);
     
         } catch (error) {
             console.error("Error al crear usuario/paciente:", error);
