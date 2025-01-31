@@ -1,13 +1,18 @@
 export default function Home() {
     return (
       <div id="inicio">
-        <div>
-      {/* Carrusel */}
-      <div id="carouselExample" className="carousel slide" data-bs-ride="carousel">
+
+<div id="carouselExample" className="carousel slide w-75 mx-auto" data-bs-ride="carousel">
         <div className="carousel-inner">
-          {[1, 2, 3, 4, 5].map((num, index) => (
-            <div key={num} className={`carousel-item ${index === 0 ? "active" : ""}`}>
-              <img src={`https://picsum.photos/800/400?random=${num}`} className="d-block w-100" alt={`Slide ${num}`} />
+          {[
+            { src: "../img/frente.png", alt: "Fachada de clínica" },
+            { src: "../img/pediatra1.png", alt: "Médico atendiendo a paciente" },
+            { src: "../img/pediatra2.png", alt: "Equipos médicos" },
+            { src: "../img/pasillo.png", alt: "Sala de espera" },
+            { src: "../img/ambulancia.png", alt: "Sala de cirugía" }
+          ].map((item, index) => (
+            <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+              <img src={item.src} className="d-block w-100" alt={item.alt} />
             </div>
           ))}
         </div>
@@ -21,16 +26,20 @@ export default function Home() {
 
       {/* Sección de Cards */}
       <div className="container mt-5">
-        <h2 className="text-center mb-4">Galería de Imágenes</h2>
+        <h2 className="text-center mb-4">Nuestros Servicios</h2>
         <div className="row">
-          {[1, 2, 3].map((num) => (
-            <div key={num} className="col-md-4">
+          {[
+            { src: "../img/consulta.png", title: "Consulta Médica", text: "Atención profesional con los mejores especialistas." },
+            { src: "../img/radiologia.png", title: "Radiología", text: "Tecnología avanzada para un diagnóstico preciso." },
+            { src: "../img/farmacia.png", title: "Farmacia", text: "Medicamentos y productos de salud a tu disposición." }
+          ].map((card, index) => (
+            <div key={index} className="col-md-4">
               <div className="card">
-                <img src={`https://picsum.photos/400/300?random=${num + 5}`} className="card-img-top" alt="..." />
+                <img src={card.src} className="rounded-circle img-fluid shadow mb-3 w-75 mx-auto" alt={card.title} />
                 <div className="card-body">
-                  <h5 className="card-title">Imagen {num}</h5>
-                  <p className="card-text">Descripción breve de la imagen {num}.</p>
-                  <a href="#" className="btn btn-primary">Ver más</a>
+                  <h5 className="card-title">{card.title}</h5>
+                  <p className="card-text">{card.text}</p>
+                  <a href="#" className="btn btn-primary">Más información</a>
                 </div>
               </div>
             </div>
@@ -40,11 +49,10 @@ export default function Home() {
 
       {/* Pie de Página */}
       <footer className="bg-dark text-light text-center py-3 mt-5">
-        <p>© 2024 Mi Sitio Web. Todos los derechos reservados.</p>
+        <p>© 2024 Clínica Salud & Bienestar. Todos los derechos reservados.</p>
       </footer>
     </div>
-
-      </div>
+        
       
     );
   }
