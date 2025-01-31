@@ -16,9 +16,8 @@ import Doctores from "./pages/doctores";
 import Administradores from "./pages/administradores";
 import Recepcionistas from "./pages/recepcionistas";
 import Registro from "./pages/Registro";
-
-
-
+import AddDoctor from "./pages/administrador/regDoctor";
+import AddRecepcionista from "./pages/administrador/Recepcionista";
 
 
 
@@ -66,7 +65,8 @@ export default function App() {
         <Route path="/administradores" element={<Administradores />} />
         <Route path="/recepcionistas" element={<Recepcionistas />} />
         <Route path="/registro" element={<Registro />} />
-
+        <Route path="/addDoctor" element={<AddDoctor />} />
+        <Route path="/addRecepcionista" element={<AddRecepcionista />} />
 
 
 
